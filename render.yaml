@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: my-flask-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: DB_USER
+        value: admin
+      - key: DB_PASSWORD
+        value: mdgeROO3iXnZKd6UkxB8AO2J0Xmijtq8
+      - key: DB_HOST
+        value: dpg-cqb9mtaju9rs73bkqf5g-a.oregon-postgres.render.com
+      - key: DB_NAME
+        value: capstone_ij6c
+      - key: DB_PORT
+        value: 5432
